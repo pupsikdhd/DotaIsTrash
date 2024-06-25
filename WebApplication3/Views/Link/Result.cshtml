@@ -1,0 +1,48 @@
+﻿
+@if (ViewBag.a == null)
+{
+    <p>error</p>
+}
+else
+{
+
+    <dialog class="siteDialog">
+        <h3>
+            @ViewBag.a
+        </h3>
+        <button class="btn" onclick="closeDialog()">Close</button>
+    </dialog>
+
+
+    <a href="@ViewBag.a">test link</a>
+    <br />
+    <button class="btn" onclick="copyLink()">Copy</button>
+    <button class="btn" onclick="showDialog()">Show</button>
+
+}
+
+<script>
+
+    var dialog = document.querySelector('.siteDialog');
+    function copyLink()
+    {
+        navigator.clipboard.writeText("@ViewBag.a");
+    }
+
+    function showDialog() {
+        dialog.showModal();d
+    }
+    function closeDialog()
+    {
+        dialog.close();
+    }
+</script>
+<style>
+    .btn {
+        margin-top: 10px;
+    }
+
+    .GeneratedLink {
+        font-size: 1px;
+    }
+</style>

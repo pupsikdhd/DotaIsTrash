@@ -1,0 +1,86 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+h1 
+{
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+h2, h3 ,p
+{
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(0.1rem, 8vw, 2rem);
+}
+.fullscreen-btn
+{
+    width:100%;
+}
+.siteDialog {
+    background-color: #e6e6e6;
+    color: black;
+    border: none;
+    min-width: 300px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.code-p {
+    text-align: center;
+    background-color: darkgray;
+}
+.btn {
+    background-color: #cccaca;
+    border: none;
+    color: black;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid white;
+    transition: all 1s ease;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        border: 0.2px solid black;
+        background-color: transparent;
+        color: black;
+    }
+}
+
+@media (hover: none) {
+    .btn:active {
+        border: 0.2px solid black;
+        background-color: transparent;
+        color: black;
+    }
+}
+.code-p {
+    text-align: center;
+}
+
+.code-text {
+    border-style: dashed;
+    color: black;
+}

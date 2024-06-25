@@ -1,0 +1,64 @@
+﻿body {
+
+    color: #ddd; 
+    background-color: #333; 
+
+}
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+
+h2, h3 {
+    font-size: clamp(0.1rem, 8vw, 2rem);
+}
+.code-p {
+    text-align: center;
+    background-color:white;
+}
+.code-text 
+{
+    border-style: dashed;
+    color:black;
+}
+.fullscreen-btn 
+{
+    width: 100%;
+}
+.siteDialog {
+    background-color: dimgrey;
+    color: white;
+    border: none;
+    min-width: 300px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+.btn {
+    margin-top: 5px;
+    background-color: #555555; 
+    border: 0.2px solid #555555;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 500ms ease-out;
+}
+@media (hover: hover) {
+    .btn:hover {
+        background-color: transparent;
+        border: 0.2px solid white;
+        color: white;
+    }
+}
+
+@media (hover: none) {
+    .btn:active {
+        background-color: transparent;
+        border: 0.2px solid white;
+        color: white;
+    }
+}

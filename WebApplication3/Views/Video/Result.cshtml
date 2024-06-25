@@ -1,0 +1,42 @@
+﻿@{
+    if (ViewBag.isHide == "on")
+    {
+        Layout = null;
+    }
+}
+<iframe width="@ViewBag.width" height="@ViewBag.height" src="https://www.youtube.com/embed/@ViewBag.ind" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<style>
+    body{
+        background-color: @ViewBag.background;
+        background-image: url("@ViewBag.image");
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+</style>
+<button onclick="showDialog()" class="btn">Show link</button>
+
+<dialog class="siteDialog">
+    <h3 class="link"></h3>
+    <button class="btn" onclick="closeDialog()">Close</button>
+    <button class="btn" onclick="copyLink()">Copy</button>
+</dialog>
+
+
+<script>
+    var link = document.querySelector('.link');
+    link.textContent = window.location.href;
+    navigator.clipboard.writeText(link.textContent);
+    var dialog = document.querySelector('.siteDialog');
+    function copyLink()
+    {
+        navigator.clipboard.writeText(link.textContent);
+    }
+
+    function showDialog() {
+        dialog.showModal();d
+    }
+    function closeDialog()
+    {
+        dialog.close();
+    }
+</script>

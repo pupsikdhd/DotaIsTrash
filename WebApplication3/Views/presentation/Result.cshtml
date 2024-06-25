@@ -1,0 +1,42 @@
+﻿
+<iframe src="@ViewBag.link" width="@ViewBag.width" height="@ViewBag.height" frameborder="0">
+</iframe>
+
+<style>
+    body {
+        background-color: @ViewBag.color;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    iframe {
+        margin: 0 auto;
+    }
+</style>
+<button onclick="showDialog()" class="btn">Show link</button>
+
+<dialog class="siteDialog">
+    <h3 class="link"></h3>
+    <button class="btn" onclick="closeDialog()">Close</button>
+    <button class="btn" onclick="copyLink()">Copy</button>
+</dialog>
+
+
+<script>
+    var link = document.querySelector('.link');
+    link.textContent = window.location.href;
+    navigator.clipboard.writeText(link.textContent);
+    var dialog = document.querySelector('.siteDialog');
+    function copyLink()
+    {
+        navigator.clipboard.writeText(link.textContent);
+    }
+
+    function showDialog() {
+        dialog.showModal();d
+    }
+    function closeDialog()
+    {
+        dialog.close();
+    }
+</script>
