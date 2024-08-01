@@ -233,6 +233,7 @@
     <Compile Include="Controllers\LinkController.cs" />
     <Compile Include="Controllers\MAPController.cs" />
     <Compile Include="Controllers\presentationController.cs" />
+    <Compile Include="Controllers\TutorialsController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -331,6 +332,8 @@
     <Content Include="Views\HttpError\NotFound.cshtml" />
     <Content Include="Views\HttpError\ISE.cshtml" />
     <Content Include="Views\dd\poshalka.html" />
+    <Content Include="Views\Tutorials\t1.cshtml" />
+    <Content Include="Views\Tutorials\t2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
